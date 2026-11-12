@@ -276,11 +276,11 @@ mod tests {
 
     #[tokio::main(flavor = "current_thread")]
     async fn test_nat64_async() {
-        assert_eq!(ipv4_to_ipv6("12.67324870.cn".to_owned(), true), "12.67324870.cn");
-        assert_eq!(ipv4_to_ipv6("12.67324870.cn".to_owned(), false), "12.67324870.cn.nip.io");
+        assert_eq!(ipv4_to_ipv6("114.67.204.131".to_owned(), true), "114.67.204.131");
+        assert_eq!(ipv4_to_ipv6("114.67.204.131".to_owned(), false), "114.67.204.131.nip.io");
         assert_eq!(
-            ipv4_to_ipv6("12.67324870.cn:8080".to_owned(), false),
-            "12.67324870.cn.nip.io:8080"
+            ipv4_to_ipv6("114.67.204.131:8080".to_owned(), false),
+            "114.67.204.131.nip.io:8080"
         );
         assert_eq!(
             ipv4_to_ipv6("rustdesk.com".to_owned(), false),
@@ -293,29 +293,29 @@ mod tests {
             .unwrap()
             .is_ipv6()
         {
-            assert!(query_nip_io(&"12.67324870.cn:80".parse().unwrap())
+            assert!(query_nip_io(&"114.67.204.131:80".parse().unwrap())
                 .await
                 .unwrap()
                 .is_ipv6());
             return;
         }
-        assert!(query_nip_io(&"12.67324870.cn:80".parse().unwrap()).await.is_err());
+        assert!(query_nip_io(&"114.67.204.131:80".parse().unwrap()).await.is_err());
     }
 
     #[test]
     fn test_test_if_valid_server() {
         assert!(!test_if_valid_server("a", false).is_empty());
         // on Linux, "1" is resolved to "0.0.0.1"
-        assert!(test_if_valid_server("12.67324870.cn", false).is_empty());
-        assert!(test_if_valid_server("12.67324870.cn:1", false).is_empty());
+        assert!(test_if_valid_server("114.67.204.131", false).is_empty());
+        assert!(test_if_valid_server("114.67.204.131:1", false).is_empty());
         assert!(test_if_valid_server("microsoft.com", false).is_empty());
         assert!(test_if_valid_server("microsoft.com:1", false).is_empty());
 
         // with proxy
         // `:0` indicates `let host = check_port(host, 0);` is called.
         assert!(test_if_valid_server_for_proxy_("a:0").is_empty());
-        assert!(test_if_valid_server_for_proxy_("12.67324870.cn:0").is_empty());
-        assert!(test_if_valid_server_for_proxy_("12.67324870.cn:1").is_empty());
+        assert!(test_if_valid_server_for_proxy_("114.67.204.131:0").is_empty());
+        assert!(test_if_valid_server_for_proxy_("114.67.204.131:1").is_empty());
         assert!(test_if_valid_server_for_proxy_("abc.com:0").is_empty());
         assert!(test_if_valid_server_for_proxy_("abcd.com:1").is_empty());
     }
@@ -325,8 +325,8 @@ mod tests {
         assert_eq!(check_port("[1:2]:12", 32), "[1:2]:12");
         assert_eq!(check_port("1:2", 32), "[1:2]:32");
         assert_eq!(check_port("z1:2", 32), "z1:2");
-        assert_eq!(check_port("12.67324870.cn", 32), "12.67324870.cn:32");
-        assert_eq!(check_port("12.67324870.cn:32", 32), "12.67324870.cn:32");
+        assert_eq!(check_port("114.67.204.131", 32), "114.67.204.131:32");
+        assert_eq!(check_port("114.67.204.131:32", 32), "114.67.204.131:32");
         assert_eq!(check_port("test.com:32", 0), "test.com:32");
         assert_eq!(increase_port("[1:2]:12", 1), "[1:2]:13");
         assert_eq!(increase_port("1.2.2.4:12", 1), "1.2.2.4:13");

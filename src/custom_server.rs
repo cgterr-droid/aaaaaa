@@ -183,7 +183,7 @@ mod test {
             }
         );
         let lic = CustomServer {
-            host: "12.67324870.cn".to_owned(),
+            host: "114.67.204.131".to_owned(),
             key: "5Qbwsde3unUcJBtrx9ZkvUmwFNoExHzpryHuPUdqlWM=".to_owned(),
             api: "".to_owned(),
             relay: "".to_owned(),
