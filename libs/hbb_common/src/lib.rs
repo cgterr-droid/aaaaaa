@@ -516,8 +516,8 @@ mod test {
         assert!(is_ipv6_str("[ABEF:2a:3]:12"));
         assert!(!is_ipv6_str("[ABEG:2a:3]:12"));
         assert!(!is_ipv6_str("1[ab:2:3]:12"));
-        assert!(!is_ipv6_str("114.67.204.131"));
-        assert!(is_ip_str("114.67.204.131"));
+        assert!(!is_ipv6_str("1.1.1.1"));
+        assert!(is_ip_str("1.1.1.1"));
         assert!(!is_ipv6_str("1:2:"));
         assert!(is_ipv6_str("1:2::0"));
         assert!(is_ipv6_str("[1:2::0]:1"));
@@ -550,7 +550,7 @@ mod test {
         assert!(is_domain_port_str("some-other.domain.com:12"));
         assert!(!is_domain_port_str("under_score:12"));
         assert!(!is_domain_port_str("a@bc:12"));
-        assert!(!is_domain_port_str("114.67.204.131:12"));
+        assert!(!is_domain_port_str("1.1.1.1:12"));
         assert!(!is_domain_port_str("1.2.3:12"));
         assert!(!is_domain_port_str("1.2.3.45:12"));
         assert!(!is_domain_port_str("a.b.c:123456"));
