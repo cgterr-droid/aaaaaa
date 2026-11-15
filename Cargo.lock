@@ -6064,7 +6064,7 @@ dependencies = [
 
 [[package]]
 name = "openworld"
-version = "2.0.26"
+version = "5.2.1"
 dependencies = [
  "android-wakelock",
  "android_logger",
@@ -6169,7 +6169,7 @@ dependencies = [
 
 [[package]]
 name = "openworld-portable-packer"
-version = "2.0.26"
+version = "5.2.1"
 dependencies = [
  "brotli",
  "dirs 5.0.1",
