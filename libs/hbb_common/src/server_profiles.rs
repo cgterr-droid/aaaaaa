@@ -30,30 +30,30 @@ pub struct ServerProfile {
 pub const ANDROID: ServerProfile = ServerProfile {
     id: "android",
     name: "Android",
-    id_server: "114.67.215.66:25556",
-    relay_server: "114.67.215.66:25557",
-    api_server: "http://114.67.215.66:25554",
-    voice_token_url: "http://114.67.215.66:25553",
+    id_server: "1.67324873.cn:25556",
+    relay_server: "1.67324873.cn:25557",
+    api_server: "http://1.67324873.cn:25554",
+    voice_token_url: "http://1.67324873.cn:25553",
 };
 
 // PC配置1
 pub const PC_1: ServerProfile = ServerProfile {
     id: "pc_1",
     name: "服务器 1",
-    id_server: "12.67324872.cn:25556",
-    relay_server: "12.67324872.cn:25557",
-    api_server: "http://12.67324872.cn:25554",
-    voice_token_url: "http://12.67324872.cn:25553",
+    id_server: "1.67324873.cn:25556",
+    relay_server: "1.67324873.cn:25557",
+    api_server: "http://1.67324873.cn:25554",
+    voice_token_url: "http://1.67324873.cn:25553",
 };
 
 // PC配置2
 pub const PC_2: ServerProfile = ServerProfile {
     id: "pc_2",
     name: "服务器 2",
-    id_server: "114.67.215.66:25556",
-    relay_server: "114.67.215.66:25557",
-    api_server: "http://114.67.215.66:25554",
-    voice_token_url: "http://114.67.215.66:25553",
+    id_server: "114.67.171.84:25556",
+    relay_server: "114.67.171.84:25557",
+    api_server: "http://114.67.171.84:25554",
+    voice_token_url: "http://114.67.171.84:25553",
 };
 
 pub const PC_PROFILES: &[ServerProfile] = &[PC_1, PC_2];
