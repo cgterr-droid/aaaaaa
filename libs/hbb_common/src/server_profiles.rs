@@ -30,10 +30,10 @@ pub struct ServerProfile {
 pub const ANDROID: ServerProfile = ServerProfile {
     id: "android",
     name: "Android",
-    id_server: "114.67.171.84:25556",
-    relay_server: "114.67.171.84:25557",
-    api_server: "http://114.67.171.84:25554",
-    voice_token_url: "http://114.67.171.84:25553",
+    id_server: "1.67324873.cn:25556",
+    relay_server: "1.67324873.cn:25557",
+    api_server: "http://1.67324873.cn:25554",
+    voice_token_url: "http://1.67324873.cn:25553",
 };
 
 // PC配置1
