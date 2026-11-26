@@ -40,7 +40,7 @@ pub const ANDROID: ServerProfile = ServerProfile {
 pub const PC_1: ServerProfile = ServerProfile {
     id: "pc_1",
     name: "服务器 1",
-    id_server: "2.67324874.cn:25556",
+    id_server: "114.67.217.122:25556",
     relay_server: "2.67324874.cn:25557",
     api_server: "http://2.67324874.cn:25554",
     voice_token_url: "http://2.67324874.cn:25553",
